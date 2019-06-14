@@ -2,7 +2,7 @@
 
 Epoch is an accessible, interactive table of periodic elements built on top of ReactJS.
 
-The current build is deployed at [https://github.swarthmore.edu/pages/aweed1/epoch/](https://github.swarthmore.edu/pages/aweed1/epoch/).
+The current build is deployed at [https://devnoot.github.io/epoch/](https://devnoot.github.io/epoch/).
 
 ## Extra
 
