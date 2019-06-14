@@ -1,3 +1,9 @@
+# Epoch
+
+Epoch is an accessible, interactive table of periodic elements built on top of ReactJS.
+
+## Extra
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
