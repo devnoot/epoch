@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import { Container, Box, Typography, Paper } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import ElementsGrid from "../ElementsGrid";
+import Element from "../Element";
 import data from "./PeriodicTableJSON.json";
+
+const elWidth = "64px";
+const elHeight = "64px";
 
 class Main extends Component {
   state = {
@@ -13,28 +17,20 @@ class Main extends Component {
     return (
       <>
         <Container maxWidth="xl">
-          <ElementsGrid />
-          <table>
-            <tbody>
-              {data.elements.map((element, i) => (
-                <tr key={i}>
-                  <td>
-                    <Box>
-                      <Paper>
-                        <Typography variant="h4" align="center">
-                          {element.symbol}
-                        </Typography>
-
-                        <Typography variant="subtitle1" align="center">
-                          {element.atomic_mass}
-                        </Typography>
-                      </Paper>
-                    </Box>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <ElementsGrid>
+            {data.elements.map((el, i) => (
+              <Element
+                key={i}
+                width={elWidth}
+                height={elHeight}
+                number={el.number}
+                symbol={el.symbol}
+                mass={el.atomic_mass}
+                xpos={el.xpos}
+                ypos={el.ypos}
+              />
+            ))}
+          </ElementsGrid>
         </Container>
       </>
     );
