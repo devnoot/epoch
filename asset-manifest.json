@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pages/aweed1/epoch/static/css/main.cfda8877.chunk.css",
-    "main.js": "/pages/aweed1/epoch/static/js/main.7b2c9fff.chunk.js",
-    "main.js.map": "/pages/aweed1/epoch/static/js/main.7b2c9fff.chunk.js.map",
-    "runtime~main.js": "/pages/aweed1/epoch/static/js/runtime~main.977db021.js",
-    "runtime~main.js.map": "/pages/aweed1/epoch/static/js/runtime~main.977db021.js.map",
-    "static/js/2.d71aebd1.chunk.js": "/pages/aweed1/epoch/static/js/2.d71aebd1.chunk.js",
-    "static/js/2.d71aebd1.chunk.js.map": "/pages/aweed1/epoch/static/js/2.d71aebd1.chunk.js.map",
-    "index.html": "/pages/aweed1/epoch/index.html",
-    "precache-manifest.f9f0a94094d613ee05013bfeefa3aa47.js": "/pages/aweed1/epoch/precache-manifest.f9f0a94094d613ee05013bfeefa3aa47.js",
-    "service-worker.js": "/pages/aweed1/epoch/service-worker.js",
-    "static/css/main.cfda8877.chunk.css.map": "/pages/aweed1/epoch/static/css/main.cfda8877.chunk.css.map"
+    "main.css": "/epoch/static/css/main.cfda8877.chunk.css",
+    "main.js": "/epoch/static/js/main.7b2c9fff.chunk.js",
+    "main.js.map": "/epoch/static/js/main.7b2c9fff.chunk.js.map",
+    "runtime~main.js": "/epoch/static/js/runtime~main.d66eaa46.js",
+    "runtime~main.js.map": "/epoch/static/js/runtime~main.d66eaa46.js.map",
+    "static/js/2.d71aebd1.chunk.js": "/epoch/static/js/2.d71aebd1.chunk.js",
+    "static/js/2.d71aebd1.chunk.js.map": "/epoch/static/js/2.d71aebd1.chunk.js.map",
+    "index.html": "/epoch/index.html",
+    "precache-manifest.e2799dde27630d63842243c279888ff1.js": "/epoch/precache-manifest.e2799dde27630d63842243c279888ff1.js",
+    "service-worker.js": "/epoch/service-worker.js",
+    "static/css/main.cfda8877.chunk.css.map": "/epoch/static/css/main.cfda8877.chunk.css.map"
   }
 }
