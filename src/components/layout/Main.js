@@ -1,27 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Container,
   Table,
   TableBody,
-  TableCell,
   TableHead,
-  TableRow
+  TableRow,
+  TableCell
 } from "@material-ui/core";
+import data from "./PeriodicTableJSON.json";
 
-const Main = ({ children }) => (
-  <>
-    <Container maxWidth="xl">
-      <Table size="medium">
-        <TableHead>
-          <TableRow>Something</TableRow>
-        </TableHead>
+class Main extends Component {
+  state = {
+    error: "",
+    elements: ""
+  };
 
-        <TableBody>
-          <TableRow>Something Else</TableRow>
-        </TableBody>
-      </Table>
-    </Container>
-  </>
-);
+  render() {
+    return (
+      <>
+        <Container maxWidth="xl">
+          <table>
+            <tbody>
+              {data.elements.map((element, i) => (
+                <tr key={i}>
+                  <td>{element.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Container>
+      </>
+    );
+  }
+}
 
 export default Main;
