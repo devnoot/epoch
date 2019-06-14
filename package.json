@@ -2,7 +2,7 @@
   "name": "epoch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.swarthmore.edu/aweed1/epoch",
+  "homepage": "https://github.swarthmore.edu/pages/aweed1/epoch/",
   "dependencies": {
     "@material-ui/core": "^4.1.1",
     "@material-ui/icons": "^4.2.0",
@@ -18,8 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "help": "gh-pages --help"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
