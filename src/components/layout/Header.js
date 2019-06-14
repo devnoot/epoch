@@ -1,8 +1,9 @@
 import React from "react";
+import MainAppBar from "../MainAppBar";
 
 const Header = ({ children }) => (
   <>
-    <div>{children}</div>
+    <MainAppBar />
   </>
 );
 
