@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "@material-ui/core";
 
 const Footer = ({ children }) => (
   <>
     <hr />
-    <div>{children}</div>
+    <Container maxWidth="xl">{children}</Container>
   </>
 );
 

@@ -1,8 +1,26 @@
 import React from "react";
+import {
+  Container,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@material-ui/core";
 
 const Main = ({ children }) => (
   <>
-    <div>{children}</div>
+    <Container maxWidth="xl">
+      <Table size="medium">
+        <TableHead>
+          <TableRow>Something</TableRow>
+        </TableHead>
+
+        <TableBody>
+          <TableRow>Something Else</TableRow>
+        </TableBody>
+      </Table>
+    </Container>
   </>
 );
 
