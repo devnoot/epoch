@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header" />
       <main className="App-main" />
-      <footer className="App.footer" />
+      <footer className="App-footer" />
     </div>
   );
 }
