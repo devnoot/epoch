@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Box, Typography, Paper } from "@material-ui/core";
+import ElementsGrid from "../ElementsGrid";
 import data from "./PeriodicTableJSON.json";
 
 class Main extends Component {
@@ -12,6 +13,7 @@ class Main extends Component {
     return (
       <>
         <Container maxWidth="xl">
+          <ElementsGrid />
           <table>
             <tbody>
               {data.elements.map((element, i) => (
