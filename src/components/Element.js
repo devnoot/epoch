@@ -2,43 +2,78 @@
  * @description An element container
  */
 
-import React from "react";
-import { Box, Paper, Typography } from "@material-ui/core";
+import React, { Component } from "react";
+import { Box, Paper, Typography, Tooltip } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-const Element = props => {
-  const { width, height, number, symbol, mass, onClick, xpos, ypos } = props;
-  const boxStyles = {
-    width,
-    height,
-    gridColumnStart: xpos,
-    gridColumnEnd: xpos + 1,
-    gridRowStart: ypos,
-    gridRowEnd: ypos + 1
+class Element extends Component {
+  state = {
+    isActive: false,
+    elevation: 1
   };
 
-  return (
-    <Box style={boxStyles} onClick={onClick}>
-      <Paper>
-        <Typography variant="caption">{number}</Typography>
+  render() {
+    const {
+      width,
+      height,
+      number,
+      symbol,
+      mass,
+      name,
+      xpos,
+      ypos
+    } = this.props;
 
-        <Typography variant="h6" align="center">
-          {symbol}
-        </Typography>
+    const boxStyles = {
+      width,
+      height,
+      gridColumnStart: xpos,
+      gridColumnEnd: xpos + 1,
+      gridRowStart: ypos,
+      gridRowEnd: ypos + 1,
+      cursor: "pointer"
+    };
 
-        <Typography variant="caption" align="center">
-          {round(mass, 3)}
-        </Typography>
-      </Paper>
-    </Box>
-  );
-};
+    return (
+      <Tooltip title={name} placement="top">
+        <Box
+          style={boxStyles}
+          onMouseOver={e => {
+            this.setState({
+              isActive: true,
+              elevation: 16
+            });
+          }}
+          onMouseOut={e => {
+            this.setState({
+              isActive: false,
+              elevation: 1
+            });
+          }}
+        >
+          <Paper elevation={this.state.elevation}>
+            <Typography variant="caption">{number}</Typography>
+
+            <Typography variant="h6" align="center">
+              {symbol}
+            </Typography>
+
+            <Typography variant="body2" align="center">
+              {round(mass, 3)}
+            </Typography>
+          </Paper>
+        </Box>
+      </Tooltip>
+    );
+  }
+}
 
 function round(val, dec) {
   return Number(Math.round(val + "e" + dec) + "e-" + dec);
 }
 
 Element.propTypes = {
+  name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   symbol: PropTypes.string.isRequired,
   mass: PropTypes.number.isRequired,
