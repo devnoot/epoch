@@ -28,6 +28,7 @@ class Main extends Component {
                 mass={el.atomic_mass}
                 xpos={el.xpos}
                 ypos={el.ypos}
+                name={el.name}
               />
             ))}
           </ElementsGrid>
