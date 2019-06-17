@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import { Box, Paper, Typography, Tooltip } from "@material-ui/core";
 import PropTypes from "prop-types";
 
+
 class Element extends Component {
   state = {
     isActive: false,
@@ -21,7 +22,8 @@ class Element extends Component {
       mass,
       name,
       xpos,
-      ypos
+      ypos,
+      bgColor
     } = this.props;
 
     const boxStyles = {
@@ -51,7 +53,7 @@ class Element extends Component {
             });
           }}
         >
-          <Paper elevation={this.state.elevation}>
+          <Paper elevation={this.state.elevation} style={{ backgroundColor: bgColor }}>
             <Typography variant="caption">{number}</Typography>
 
             <Typography variant="h6" align="center">
