@@ -4,9 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: theme.spacing(4)
-  },
-  container: {
+    marginTop: theme.spacing(4),
     textAlign: "center"
   },
   button: {
@@ -18,21 +16,17 @@ const Legend = ({ colormap }) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.root}>
-      <Container className={classes.container}>
-        <Paper>
-          {Object.keys(colormap).map((key, i) => (
-            <Button
-              key={i}
-              className={classes.button}
-              style={{ backgroundColor: colormap[key] }}
-            >
-              {key}
-            </Button>
-          ))}
-        </Paper>
-      </Container>
-    </Box>
+    <Container className={classes.root}>
+      {Object.keys(colormap).map((key, i) => (
+        <Button
+          key={i}
+          className={classes.button}
+          style={{ backgroundColor: colormap[key] }}
+        >
+          {key}
+        </Button>
+      ))}
+    </Container>
   );
 };
 
