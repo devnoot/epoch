@@ -52,15 +52,19 @@ class Main extends Component {
   };
 
   render() {
-    let props = this.props;
     let theme = this.context;
+
+    const containerStyles = {
+      backgroundColor: theme.background,
+      transition: "all 0.25s ease"
+    };
 
     const getRandomFromArray = arr =>
       arr[Math.floor(Math.random() * arr.length)];
 
     return (
       <>
-        <Container maxWidth="xl" style={{ backgroundColor: theme.background }}>
+        <Container maxWidth="xl" style={containerStyles}>
           <ElementsGrid>
             {data.elements.map((el, i) => (
               <Element
