@@ -6,9 +6,9 @@ class ModeButton extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {({ toggleTheme }) => (
+        {({ theme, toggleTheme }) => (
           <Button color="inherit" onClick={toggleTheme}>
-            Toggle mode
+            {theme.name === "light" ? "dark" : "light"} mode
           </Button>
         )}
       </ThemeContext.Consumer>

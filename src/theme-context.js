@@ -2,6 +2,7 @@ import React from "react";
 import { blue, deepPurple } from "@material-ui/core/colors";
 export const themes = {
   light: {
+    name: "light",
     foreground: "#000000",
     background: "#eeeeee",
     appBar: {
@@ -9,6 +10,7 @@ export const themes = {
     }
   },
   dark: {
+    name: "dark",
     foreground: "#ffffff",
     background: "#222222",
     appBar: {

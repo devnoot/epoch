@@ -9,7 +9,7 @@ class MainAppBar extends Component {
 
     const AppBarStyles = {
       backgroundColor: ctx.theme.appBar.background,
-      transition: "background-color 0.5s ease-in, color 0.5s ease-in",
+      transition: "background-color 0.25s ease-in, color 0.25s ease-in",
       marginBottom: "32px",
       flexGrow: 1
     };

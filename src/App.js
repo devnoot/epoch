@@ -3,11 +3,6 @@ import { ThemeContext, themes } from "./theme-context";
 import "./App.css";
 import { Button } from "@material-ui/core";
 
-const ChangeThemeButton = props => (
-  <Button variant="contained" onClick={props.changeTheme}>
-    Change Theme
-  </Button>
-);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +24,7 @@ class App extends Component {
     const appStyles = {
       backgroundColor: this.state.theme.background,
       color: this.state.theme.foreground,
-      transition: "background-color 0.5s ease-in"
+      transition: "background-color 0.25s ease-in"
     };
 
     return (

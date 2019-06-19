@@ -57,7 +57,7 @@ class Main extends Component {
     const containerStyles = {
       backgroundColor: theme.background,
       color: theme.foreground,
-      transition: "background-color 0.5s ease-in, color 0.5s ease-in"
+      transition: "background-color 0.25s ease-in, color 0.25s ease-in"
     };
 
     const getRandomFromArray = arr =>
