@@ -21,10 +21,15 @@ class App extends Component {
 
   render() {
     const { header, main, footer } = this.props;
+    const appStyles = {
+      backgroundColor: this.state.theme.background,
+      color: this.state.theme.foreground,
+      transition: "background-color 0.5s ease-in"
+    };
 
     return (
       <ThemeContext.Provider value={this.state.theme}>
-        <div className="App">
+        <div className="App" style={appStyles}>
           <header className="App-header">{header}</header>
           <ChangeThemeButton changeTheme={this.toggleTheme} />
           <main className="App-main">{main}</main>
