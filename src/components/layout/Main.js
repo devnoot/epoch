@@ -18,6 +18,7 @@ import {
   teal,
   yellow
 } from "@material-ui/core/colors";
+import { ThemeContext } from "../../theme-context";
 
 const mapStylesToElementTypes = {
   // non metals
@@ -51,12 +52,20 @@ class Main extends Component {
   };
 
   render() {
+    let theme = this.context;
+
+    const containerStyles = {
+      backgroundColor: theme.background,
+      color: theme.foreground,
+      transition: "background-color 0.25s ease-in, color 0.25s ease-in"
+    };
+
     const getRandomFromArray = arr =>
       arr[Math.floor(Math.random() * arr.length)];
 
     return (
       <>
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" style={containerStyles}>
           <ElementsGrid>
             {data.elements.map((el, i) => (
               <Element
@@ -81,4 +90,5 @@ class Main extends Component {
   }
 }
 
+Main.contextType = ThemeContext;
 export default Main;
