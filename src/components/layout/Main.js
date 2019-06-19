@@ -3,7 +3,42 @@ import { Container } from "@material-ui/core";
 import ElementsGrid from "../ElementsGrid";
 import Element from "../Element";
 import data from "./PeriodicTableJSON.json";
-import { red, pink, purple, deepPurple, indigo, blue, lightBlue, cyan, teal, green, lightGreen, lime, yellow, amber, orange, deepOrange } from "@material-ui/core/colors";
+import {
+  blue,
+  brown,
+  cyan,
+  green,
+  grey,
+  indigo,
+  orange,
+  pink,
+  purple,
+  red,
+  teal,
+  yellow
+} from "@material-ui/core/colors";
+
+const mapStylesToElementTypes = {
+  // non metals
+  "diatomic nonmetal": blue[200],
+  "polyatomic nonmetal": blue[200],
+  "noble gas": cyan[400],
+
+  // metals
+  "alkali metal": red[400],
+  "alkaline earth metal": orange[400],
+  metalloid: brown[200],
+  "post-transition metal": brown[400],
+  "transition metal": pink[200],
+  lanthanide: purple[200],
+
+  //unknowns
+  "unknown, probably transition metal": grey[400],
+  "unknown, probably post-transition metal": grey[400],
+  "unknown, probably metalloid": grey[400],
+  "unknown, predicted to be noble gas": grey[400],
+  "unknown, but predicted to be an alkali metal": grey[400]
+};
 
 const elWidth = "64px";
 const elHeight = "64px";
@@ -15,28 +50,8 @@ class Main extends Component {
   };
 
   render() {
-
-    const colors = [red, pink, purple, deepPurple, indigo, blue, lightBlue, cyan, teal, green, lightGreen, lime, yellow, amber, orange, deepOrange]
-
-    const getUniqueCategories = elements => ([...new Set(elements.map(el => el.category))])
-
-    const generateCategoryColors = categories => {
-      const bgColors = [];
-      
-      for (let i=0; i<categories.length; i++) {
-        const randomColor = getRandomFromArray(colors)
-        console.log(randomColor)
-        bgColors.push(randomColor[400])
-      }
-
-      return bgColors;
-    }
-
-    const getRandomFromArray = arr => (arr[Math.floor(Math.random() * arr.length)])
-
-    const bgColors = generateCategoryColors(getUniqueCategories(data.elements))
-
-    console.log(bgColors);
+    const getRandomFromArray = arr =>
+      arr[Math.floor(Math.random() * arr.length)];
 
     return (
       <>
@@ -53,7 +68,7 @@ class Main extends Component {
                 xpos={el.xpos}
                 ypos={el.ypos}
                 name={el.name}
-                bgColor={bgColors[i] ? bgColors[i] : "#cccccc"}
+                bgColor={mapStylesToElementTypes[el.category]}
               />
             ))}
           </ElementsGrid>
