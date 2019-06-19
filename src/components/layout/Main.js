@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "@material-ui/core";
 import ElementsGrid from "../ElementsGrid";
 import Element from "../Element";
+import Legend from "../Legend";
 import data from "./PeriodicTableJSON.json";
 import {
   blue,
@@ -72,6 +73,8 @@ class Main extends Component {
               />
             ))}
           </ElementsGrid>
+
+          <Legend colormap={mapStylesToElementTypes} />
         </Container>
       </>
     );
