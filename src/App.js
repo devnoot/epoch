@@ -9,15 +9,20 @@ const ChangeThemeButton = props => (
   </Button>
 );
 class App extends Component {
-  state = {
-    theme: themes.light
-  };
+  constructor(props) {
+    super(props);
 
-  toggleTheme = () => {
-    this.setState(state => ({
-      theme: state.theme === themes.dark ? themes.light : themes.dark
-    }));
-  };
+    this.toggleTheme = () => {
+      this.setState(state => ({
+        theme: state.theme === themes.dark ? themes.light : themes.dark
+      }));
+    };
+
+    this.state = {
+      theme: themes.light,
+      toggleTheme: this.toggleTheme
+    };
+  }
 
   render() {
     const { header, main, footer } = this.props;
@@ -28,10 +33,9 @@ class App extends Component {
     };
 
     return (
-      <ThemeContext.Provider value={this.state.theme}>
+      <ThemeContext.Provider value={this.state}>
         <div className="App" style={appStyles}>
           <header className="App-header">{header}</header>
-          <ChangeThemeButton changeTheme={this.toggleTheme} />
           <main className="App-main">{main}</main>
           <footer className="App-footer">{footer}</footer>
         </div>

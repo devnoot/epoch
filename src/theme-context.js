@@ -18,4 +18,7 @@ export const themes = {
   // bgColorTransition: "background-color 2s ease-in" For some reason this does not work
 };
 
-export const ThemeContext = React.createContext(themes.light);
+export const ThemeContext = React.createContext({
+  theme: themes.light,
+  toggleTheme: () => {}
+});
