@@ -6,7 +6,7 @@ export const themes = {
     foreground: "#000000",
     background: "#eeeeee",
     appBar: {
-      background: blue[400]
+      background: blue[800]
     }
   },
   dark: {

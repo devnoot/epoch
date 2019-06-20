@@ -30,7 +30,7 @@ const mapStylesToElementTypes = {
   "alkali metal": red[400],
   "alkaline earth metal": orange[400],
   metalloid: brown[200],
-  "post-transition metal": brown[400],
+  "post-transition metal": brown[200],
   "transition metal": pink[200],
   lanthanide: purple[200],
 
