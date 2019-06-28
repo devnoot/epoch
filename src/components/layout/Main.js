@@ -82,8 +82,6 @@ class Main extends Component {
               />
             ))}
           </ElementsGrid>
-
-          <Legend colormap={mapStylesToElementTypes} />
         </Container>
       </>
     );
