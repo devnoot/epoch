@@ -9,7 +9,8 @@ const Popover = ({ isActive, content, mouseX, mouseY }) => {
     left: mouseX + 32,
     backgroundColor: "#000000",
     color: "#ffffff",
-    padding: "4px 8px"
+    padding: "4px 8px",
+    fontSize: "2rem"
   };
 
   return isActive ? (
