@@ -65,7 +65,7 @@ class Main extends Component {
 
     return (
       <>
-        <Container maxWidth="xl" style={containerStyles}>
+        <Container style={containerStyles}>
           <ElementsGrid>
             {data.elements.map((el, i) => (
               <Element

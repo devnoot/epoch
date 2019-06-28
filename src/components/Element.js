@@ -34,8 +34,9 @@ class Element extends Component {
     } = this.props;
 
     const boxStyles = {
-      width,
-      height,
+      minWidth: "48px",
+      width: "64px",
+      maxWidth: "64px",
       gridColumnStart: xpos,
       gridColumnEnd: xpos + 1,
       gridRowStart: ypos,
@@ -64,7 +65,9 @@ class Element extends Component {
             elevation={this.state.elevation}
             style={{ backgroundColor: bgColor }}
           >
-            <Typography variant="caption">{number}</Typography>
+            <Typography variant="caption" style={{ marginLeft: "4px" }}>
+              {number}
+            </Typography>
 
             <Typography variant="h6" align="center">
               {symbol}
