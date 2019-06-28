@@ -6,12 +6,13 @@ import React from "react";
 
 const containerStyles = {
   display: "grid",
-  gridGap: "16px 16px",
+  gridGap: "8px",
   // There periodic table of elements has 18 columns.
   gridTemplateColumns:
     "auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto",
   gridTemplateRows: "auto auto auto auto auto auto auto auto auto",
-  justifyContent: "center"
+
+  width: "100%"
 };
 
 const ElementsGrid = ({ children }) => {

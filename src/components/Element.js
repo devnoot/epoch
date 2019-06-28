@@ -5,7 +5,13 @@
 import React, { Component } from "react";
 import { Box, Paper, Typography, Tooltip } from "@material-ui/core";
 import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 
+const styles = {
+  tooltip: {
+    fontSize: "1.25rem"
+  }
+};
 
 class Element extends Component {
   state = {
@@ -23,12 +29,14 @@ class Element extends Component {
       name,
       xpos,
       ypos,
-      bgColor
+      bgColor,
+      classes
     } = this.props;
 
     const boxStyles = {
-      width,
-      height,
+      minWidth: "48px",
+      width: "64px",
+      maxWidth: "64px",
       gridColumnStart: xpos,
       gridColumnEnd: xpos + 1,
       gridRowStart: ypos,
@@ -37,7 +45,7 @@ class Element extends Component {
     };
 
     return (
-      <Tooltip title={name} placement="top">
+      <Tooltip title={name} placement="top" classes={classes}>
         <Box
           style={boxStyles}
           onMouseOver={e => {
@@ -53,8 +61,13 @@ class Element extends Component {
             });
           }}
         >
-          <Paper elevation={this.state.elevation} style={{ backgroundColor: bgColor }}>
-            <Typography variant="caption">{number}</Typography>
+          <Paper
+            elevation={this.state.elevation}
+            style={{ backgroundColor: bgColor }}
+          >
+            <Typography variant="caption" style={{ marginLeft: "4px" }}>
+              {number}
+            </Typography>
 
             <Typography variant="h6" align="center">
               {symbol}
@@ -85,4 +98,4 @@ Element.propTypes = {
   ypos: PropTypes.number.isRequired
 };
 
-export default Element;
+export default withStyles(styles)(Element);

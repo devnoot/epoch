@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { ThemeContext, themes } from "./theme-context";
 import "./App.css";
-import { Button } from "@material-ui/core";
 
 class App extends Component {
   constructor(props) {
